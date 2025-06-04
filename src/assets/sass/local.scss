@@ -9,6 +9,7 @@
     #sbs-1308 {
         padding: var(--sectionPadding);
         overflow: hidden;
+        background-color: #f7f7f7;
 
         .cs-container {
             width: 100%;
@@ -167,6 +168,62 @@
         }
     }
 }
+
+/*-- -------------------------- -->
+<---          Services          --> Language section
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #services-884 {
+        padding: var(--sectionPadding);
+        /* clips floating arrow from overflowing */
+        overflow: hidden;
+
+        .cs-container {
+            width: 100%;
+            /* changes to 1280px at tablet */
+            max-width: calc(550 / 16 * 1rem);
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* 48px - 64px */
+            gap: clamp(3rem, 6vw, 4rem);
+        }
+
+        .cs-content {
+            /* set text align to left if content needs to be left aligned */
+            text-align: center;
+            width: 100%;
+            max-width: calc(522 / 16 * 1rem);
+            display: flex;
+            flex-direction: column;
+            /* centers content horizontally, set to flex-start to left align */
+            align-items: center;
+        }
+    }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #services-884 {
+        .cs-container {
+            max-width: calc(1280 / 16 * 1rem);
+        }
+    }
+}
+
+/* Small Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+    #services-884 {
+        .cs-item {
+            grid-column: span 1;
+        }
+    }
+}
+
+                                
 
 /*-- -------------------------- -->
 <---       Side By Side         --> Services section

@@ -175,4 +175,56 @@ eleventyNavigation:
             </li>
         </ul>
     </section>
+
+    <!-- ============================================ -->
+    <!--                 Side By Side                 -->
+    <!-- ============================================ -->
+
+    <section id="sbs-1308">
+        <div class="cs-container">
+            <!-- Left Image Section -->
+            <div class="cs-image-group">
+                <!--Image-->
+                <picture class="cs-picture">
+                    <source
+                        media="(max-width: 600px)"
+                        srcset="
+                            https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/tax1.jpg
+                        "
+                    />
+                    <source
+                        media="(min-width: 601px)"
+                        srcset="
+                            https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/tax1.jpg
+                        "
+                    />
+                    <img
+                        loading="lazy"
+                        decoding="async"
+                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/tax1.jpg"
+                        alt="meeting"
+                        width="630"
+                        height="630"
+                        aria-hidden="true"
+                    />
+                </picture>
+            </div>
+            <!-- Right Content Section-->
+            <div class="cs-content">
+                <p class="cs-text">
+                    In the new era of technology we look in the future with
+                    certainty and pride for our company and business. consider
+                    all the drivers of change gives you the blocks & pride for
+                    our components you need to change to create a truly
+                    professional website In the new era.
+                </p>
+                <a
+                    class="cs-button-solid"
+                    aria-label="learn more about our programs"
+                    href=""
+                    >Learn More</a
+                >
+            </div>
+        </div>
+    </section>
 {% endblock %}

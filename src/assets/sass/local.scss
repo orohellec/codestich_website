@@ -1,3 +1,171 @@
 /* PAGE-SPECIFIC STYLES FOR THE HOME PAGE */
 
+/*-- -------------------------- -->
+<---       Side By Side         --> Introduction section
+<--- -------------------------- -*/
 
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #sbs-1308 {
+        padding: var(--sectionPadding);
+        overflow: hidden;
+
+        .cs-container {
+            width: 100%;
+            /* changes to 1280px at desktop */
+            max-width: calc(584 / 16 * 1rem);
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: clamp(3rem, 4vw, 4rem);
+        }
+
+        .cs-content {
+            /* set text align to left if content needs to be left aligned */
+            text-align: left;
+            width: 100%;
+            max-width: calc(542 / 16 * 1rem);
+            display: flex;
+            flex-direction: column;
+            /* centers content horizontally, set to flex-start to left align */
+            align-items: flex-start;
+            position: relative;
+            z-index: 10;
+        }
+
+        .cs-text {
+            margin-bottom: (16 / 16) * 1rem;
+            &:last-of-type {
+                margin-bottom: (32 / 16) * 1rem;
+            }
+        }
+
+        .cs-button-solid {
+            font-size: calc(16 / 16 * 1rem);
+            /* 46px - 56px */
+            line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+            text-decoration: none;
+            font-weight: 700;
+            text-align: center;
+            margin: 0;
+            color: #1a1a1a;
+            min-width: calc(150 / 16 * 1rem);
+            padding: 0 calc(24 / 16 * 1rem);
+            background-color: var(--primary);
+            display: inline-block;
+            position: relative;
+            z-index: 1;
+            /* prevents padding from adding to the width */
+            box-sizing: border-box;
+            transition: color 0.3s;
+
+            &:before {
+                content: "";
+                position: absolute;
+                height: 100%;
+                width: 0%;
+                background: #000;
+                opacity: 1;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                transition: width 0.3s;
+            }
+
+            &:hover {
+                color: #fff;
+                &:before {
+                    width: 100%;
+                }
+            }
+        }
+
+        .cs-image-group {
+            width: 100%;
+            max-width: calc(670 / 16 * 1rem);
+            height: 100vw;
+            max-height: calc(630 / 16 * 1rem);
+            position: relative;
+            display: block;
+            z-index: 1;
+        }
+
+        .cs-picture {
+            /* big background image */
+            width: 93%;
+            height: 93%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: block;
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .cs-graphic {
+            width: 150%;
+            height: auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+        }
+    }
+}
+
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+    #sbs-1308 {
+        .cs-container {
+            max-width: calc(1280 / 16 * 1rem);
+            /* set to horizontal arrangement */
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: stretch;
+        }
+
+        .cs-content {
+            width: 48%;
+            padding: calc(48 / 16 * 1rem) 0;
+            align-self: center;
+            /* prevents flexbox from squishing it */
+            flex: none;
+        }
+
+        .cs-image-group {
+            width: 55%;
+            max-width: calc(670 / 16 * 1rem);
+            min-height: calc(670 / 16 * 1rem);
+            max-height: 100%;
+            height: auto;
+            margin: 0;
+        }
+
+        .cs-picture {
+            width: 93%;
+            height: 94%;
+        }
+
+        .cs-box {
+            bottom: 0;
+        }
+
+        .cs-graphic {
+            max-width: calc(715 / 16 * 1rem);
+            left: auto;
+            right: calc(130 / 16 * 1rem);
+            transform: translateY(-50%);
+        }
+    }
+}
+
+                                

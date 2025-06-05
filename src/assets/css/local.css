@@ -136,8 +136,10 @@
     margin: 0;
   }
   #sbs-1308 .cs-picture {
-    width: 93%;
-    height: 94%;
+    aspect-ratio: 558/567;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
   }
   #sbs-1308 .cs-box {
     bottom: 0;

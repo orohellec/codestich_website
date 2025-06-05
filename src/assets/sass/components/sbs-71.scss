@@ -4,8 +4,8 @@
 
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-    #RTsbs-71,
-    #RTsbsr-71 {
+    .RTsbs-71,
+    .RTsbsr-71 {
         padding: var(--sectionPadding);
 
         .cs-container {
@@ -70,29 +70,30 @@
             max-width: calc(550 / 16 * 1rem);
             margin: 0;
             position: relative;
-            display: block;
+            display: flex;
+            align-items: center;
             /* width divided by height */
-            aspect-ratio: 312/335;
+            aspect-ratio: 1000/667;
             border-radius: calc(16 / 16 * 1rem);
             z-index: 1;
 
             img {
-                position: absolute;
-                top: 0;
-                left: 0;
-                height: 100%;
                 width: 100%;
                 object-fit: cover;
                 border-radius: calc(16 / 16 * 1rem);
             }
         }
     }
+
+    .RTsbs-71 {
+        background-color: #f7f7f7;
+    }
 }
 
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
-    #RTsbs-71,
-    #RTsbsr-71 {
+    .RTsbs-71,
+    .RTsbsr-71 {
         .cs-container {
             max-width: calc(1280 / 16 * 1rem);
             flex-direction: row;
@@ -124,14 +125,12 @@
 
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-    #RTsbsr-71 {
-        background-color: #f7f7f7;
-    }
+    //empty but I let it to add stuff maybe later
 }
 
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
-    #RTsbsr-71 {
+    .RTsbsr-71 {
         .cs-container {
             justify-content: flex-end;
         }

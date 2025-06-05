@@ -152,8 +152,7 @@
         }
 
         .cs-picture {
-            width: 93%;
-            height: 94%;
+            aspect-ratio: 558 / 567; width: 100%; height: auto; object-fit: contain;
         }
 
         .cs-box {

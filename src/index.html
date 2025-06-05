@@ -77,19 +77,19 @@ eleventyNavigation:
             <source
                 media="(max-width: 600px)"
                 srcset="
-                    https://csimg.nyc3.digitaloceanspaces.com/Hero/kitchen-m.jpg
+                    {% getUrl "/assets/images/world-map-hand-resized.jpg" | resize({width: 1200}) | webp %}
                 "
             />
             <source
                 media="(min-width: 601px)"
                 srcset="
-                    https://csimg.nyc3.digitaloceanspaces.com/Hero/kitchen.jpg
+                    {% getUrl "/assets/images/world-map-hand-resized.jpg" | resize({width: 2400}) | webp %}
                 "
             />
             <img
                 loading="lazy"
                 decoding="async"
-                src="https://csimg.nyc3.digitaloceanspaces.com/Hero/kitchen.jpg"
+                src="{% getUrl "/assets/images/world-map-hand-resized.jpg" %}"
                 alt="kitchen"
                 width="2250"
                 height="1500"
@@ -186,20 +186,16 @@ eleventyNavigation:
                 <picture class="cs-picture">
                     <source
                         media="(max-width: 600px)"
-                        srcset="
-                            https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/tax1.jpg
-                        "
+                        srcset="/assets/images/logo-club-langues.jpg"
                     />
                     <source
                         media="(min-width: 601px)"
-                        srcset="
-                            https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/tax1.jpg
-                        "
+                        srcset="/assets/images/logo-club-langues.jpg"
                     />
                     <img
                         loading="lazy"
                         decoding="async"
-                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/tax1.jpg"
+                        src="/assets/images/logo-club-langues.jpg"
                         alt="meeting"
                         width="630"
                         height="630"
@@ -266,7 +262,8 @@ eleventyNavigation:
             [
                 "Les cours collectifs réunissent des petits groupes de niveau de 3 à 8 personnes et sont orientés principalement vers l'oral.",
                 "Les groupes de 3 ou 4 adultes ou adolescents peuvent demander que le cours leur soit donné en visio."
-            ]
+            ],
+            "/assets/images/cours-collectif.jpg"
         )
     }}
     {{
@@ -276,7 +273,8 @@ eleventyNavigation:
             [
                 "Des cours particuliers, face-à-face ou avec deux élèves de même niveau, sont également possibles.",
                 "Sur demande, ils peuvent être donnés en visio aux adultes et aux adolescents."
-            ]
+            ],
+            "/assets/images/cours-particuliers.jpg"
         )
     }}
     {{
@@ -285,7 +283,8 @@ eleventyNavigation:
         "Stages",
             [
                 "Stages intensifs ou entraînements de préparation aux examens (baccalauréat, TOEIC, GOETHE Institut, CIMA, HSK, DELE, DELF, CILS ou TRIKI)."
-            ]
+            ],
+            "/assets/images/stages.jpg"
         )
     }}
     {{
@@ -294,7 +293,8 @@ eleventyNavigation:
             "Formation professionnelle",
             [
                 "Le Club de langues du canton de Verneuil-sur-Seine est aussi, depuis son origine, un organisme de formation professionnelle continue."
-            ]
+            ],
+            "/assets/images/homme-costard.jpg"
         )
     }}
 

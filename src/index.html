@@ -99,7 +99,7 @@ eleventyNavigation:
     </section>
 
     <!-- ============================================ -->
-    <!--                   Services                   -->
+    <!--                 Services (hero)              -->
     <!-- ============================================ -->
 
     <section id="h-services-143">
@@ -175,7 +175,7 @@ eleventyNavigation:
 
     {# Introduction section #}
     <!-- ============================================ -->
-    <!--                 Side By Side                 -->
+    <!--            sbs Introduction section          -->
     <!-- ============================================ -->
 
     <section id="sbs-1308">
@@ -253,11 +253,60 @@ eleventyNavigation:
         </div>
     </section>
 
-    {# Languages section #}
+    <!-- ============================================ -->
+    <!--            Sbs Languages section             -->
+    <!-- ============================================ -->
+
+    <section id="sbsr-92">
+        <div class="cs-container">
+            <!-- Left content Section -->
+            <div class="cs-content">
+                <h2 class="cs-title">Nos cours de langues</h2>
+                <p class="cs-text">
+                    Le Club de langues du canton de Verneuil-sur-Seine propose
+                    des formations linguistiques pour tous les niveaux du Cadre
+                    européen commun de référence (CECR), aussi bien pour les
+                    particuliers que pour les entreprises. Pour les enfants,
+                    après les premières années de sensibilisation et
+                    d'imprégnation des petits, les groupes de niveau sont
+                    constitués en fonction des connaissances acquises, mais
+                    aussi de la tranche d’âge.
+                </p>
+                <p class="cs-text">
+                    Des enseignants, généralement de langue maternelle, sont à
+                    votre disposition pour vous aider à découvrir, apprendre ou
+                    perfectionner l'anglais, l'allemand, l'arabe littéraire, le
+                    chinois, l'espagnol, le français langue étrangère, l'italien
+                    ou le russe.
+                </p>
+            </div>
+            <!-- Right Content Section-->
+            <div class="cs-content">
+                <!--                   
+    These "Micro Stitches" are to be placed inside the .cs-content group of Side By Side Stitches.  Typically after the .cs-title or .cs-text. They are used to add more design flair to a Stitch as well as convey more information in a different way.
+-->
+
+                <ul id="list-893" class="cs-ul">
+                    <li class="cs-li">🇬🇧 Anglais</li>
+                    <li class="cs-li">🇩🇪 Allemand</li>
+                    <li class="cs-li">🇸🇦 Arabe littéraire</li>
+                    <li class="cs-li">🇨🇳 Chinois</li>
+                    <li class="cs-li">🇪🇸 Espagnol</li>
+                    <li class="cs-li">🇮🇹 Italien</li>
+                    <li class="cs-li">🇷🇺 Russe</li>
+                    <li class="cs-li">🇫🇷 Français (langue étrangère)</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!--                   Services (sbs71)           -->
+    <!-- ============================================ -->
 
     {{
         sbs71(
-            "RTsbsr-71",
+            "RTsbs-71",
             "Cours collectifs",
             [
                 "Les cours collectifs réunissent des petits groupes de niveau de 3 à 8 personnes et sont orientés principalement vers l'oral.",
@@ -268,7 +317,7 @@ eleventyNavigation:
     }}
     {{
         sbs71(
-            "RTsbs-71",
+            "RTsbsr-71",
             "Cours particuliers",
             [
                 "Des cours particuliers, face-à-face ou avec deux élèves de même niveau, sont également possibles.",
@@ -279,7 +328,7 @@ eleventyNavigation:
     }}
     {{
         sbs71(
-        "RTsbsr-71",
+        "RTsbs-71",
         "Stages",
             [
                 "Stages intensifs ou entraînements de préparation aux examens (baccalauréat, TOEIC, GOETHE Institut, CIMA, HSK, DELE, DELF, CILS ou TRIKI)."
@@ -289,7 +338,7 @@ eleventyNavigation:
     }}
     {{
         sbs71(
-            "RTsbs-71",
+            "RTsbsr-71",
             "Formation professionnelle",
             [
                 "Le Club de langues du canton de Verneuil-sur-Seine est aussi, depuis son origine, un organisme de formation professionnelle continue."
@@ -324,19 +373,19 @@ eleventyNavigation:
                     <source
                         media="(max-width: 600px)"
                         srcset="
-                            https://csimg.nyc3.digitaloceanspaces.com/Gallery/gallery1.jpg
+                            {% getUrl "/assets/images/theatre.jpg" | resize({width: 700, height: 900}) | webp %}
                         "
                     />
                     <source
                         media="(min-width: 601px)"
                         srcset="
-                            https://csimg.nyc3.digitaloceanspaces.com/Gallery/gallery1.jpg
+                            {% getUrl "/assets/images/theatre.jpg" | resize({width: 700, height: 900}) | webp %}
                         "
                     />
                     <img
                         loading="lazy"
                         decoding="async"
-                        src="https://csimg.nyc3.digitaloceanspaces.com/Gallery/gallery1.jpg"
+                        src="{% getUrl "/assets/images/theatre.jpg" | resize({width: 700, height: 900}) | webp %}"
                         alt="gallery"
                         width="305"
                         height="400"
@@ -347,19 +396,19 @@ eleventyNavigation:
                     <source
                         media="(max-width: 600px)"
                         srcset="
-                            https://csimg.nyc3.digitaloceanspaces.com/Gallery/gallery2.jpg
+                            {% getUrl "/assets/images/voyage-groupe.jpg" | resize({width: 700, height: 900}) | webp %}
                         "
                     />
                     <source
                         media="(min-width: 601px)"
                         srcset="
-                            https://csimg.nyc3.digitaloceanspaces.com/Gallery/gallery2.jpg
+                            {% getUrl "/assets/images/voyage-groupe.jpg" | resize({width: 700, height: 900}) | webp %}
                         "
                     />
                     <img
                         loading="lazy"
                         decoding="async"
-                        src="https://csimg.nyc3.digitaloceanspaces.com/Gallery/gallery2.jpg"
+                        src="{% getUrl "/assets/images/voyage-groupe.jpg" | resize({width: 700, height: 900}) | webp %}"
                         alt="gallery"
                         width="305"
                         height="400"
@@ -370,19 +419,19 @@ eleventyNavigation:
                     <source
                         media="(max-width: 600px)"
                         srcset="
-                            https://csimg.nyc3.digitaloceanspaces.com/Gallery/gallery3.jpg
+                            {% getUrl "/assets/images/exposition.jpg" | resize({width: 700, height: 900}) | webp %}
                         "
                     />
                     <source
                         media="(min-width: 601px)"
                         srcset="
-                            https://csimg.nyc3.digitaloceanspaces.com/Gallery/gallery3.jpg
+                            {% getUrl "/assets/images/exposition.jpg" | resize({width: 700, height: 900}) | webp %}
                         "
                     />
                     <img
                         loading="lazy"
                         decoding="async"
-                        src="https://csimg.nyc3.digitaloceanspaces.com/Gallery/gallery3.jpg"
+                        src="{% getUrl "/assets/images/exposition.jpg" | resize({width: 700, height: 900}) | webp %}"
                         alt="gallery"
                         width="305"
                         height="400"

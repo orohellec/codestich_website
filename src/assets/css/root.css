@@ -855,6 +855,7 @@
   #footer-1390 .cs-ul {
     margin: 0;
     padding: 0;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     align-items: center;

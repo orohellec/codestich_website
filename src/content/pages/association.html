@@ -16,120 +16,103 @@ eleventyNavigation:
 {% endblock %}
 
 {% block body %}
-    <!-- ============================================ -->
-    <!--                    LANDING                   -->
-    <!-- ============================================ -->
-
-    <section id="int-hero">
-        <h1 id="home-h">About Us</h1>
-        <picture>
-            <source
-                media="(max-width: 600px)"
-                srcset="/assets/images/cabinets2-m.jpg"
-            />
-            <source
-                media="(min-width: 601px)"
-                srcset="/assets/images/cabinets2.jpg"
-            />
-            <img
-                aria-hidden="true"
-                decoding="async"
-                src="/assets/images/cabinets2.jpg"
-                alt="kitchen cabinets"
-                loading="eager"
-                width="2500"
-                height="1667"
-            />
-        </picture>
-    </section>
-
-    <!-- ============================================ -->
-    <!--                 Side By Side                 -->
-    <!-- ============================================ -->
-
-    <section id="sbs">
+    <section class="content-page-716">
         <div class="cs-container">
-            <!-- Left Image Section -->
-            <div class="cs-left">
-                <picture class="cs-picture cs-picture1">
-                    <source
-                        media="(max-width: 600px)"
-                        srcset="/assets/images/cabinets2-m.jpg"
-                    />
-                    <source
-                        media="(min-width: 601px)"
-                        srcset="/assets/images/cabinets2.jpg"
-                    />
-                    <img
-                        aria-hidden="true"
-                        decoding="async"
-                        src="/assets/images/cabinets2.jpg"
-                        alt="cabinets"
-                        loading="lazy"
-                        width="400"
-                        height="563"
-                    />
-                </picture>
-                <picture class="cs-picture cs-picture2">
-                    <source
-                        media="(max-width: 600px)"
-                        srcset="/assets/images/construction-m.jpg"
-                    />
-                    <source
-                        media="(min-width: 601px)"
-                        srcset="/assets/images/construction.jpg"
-                    />
-                    <img
-                        aria-hidden="true"
-                        decoding="async"
-                        src="/assets/images/construction.jpg"
-                        alt="house"
-                        loading="lazy"
-                        width="400"
-                        height="563"
-                    />
-                </picture>
-            </div>
-            <!-- Right Content Section-->
-            <div class="cs-right">
-                <span class="cs-topper">About Us</span>
-                <h2 class="cs-title">About Company Title</h2>
+            <div class="cs-content">
+                <h1 class="cs-title">L'association</h1>
                 <p class="cs-text">
-                    In consequat tincidunt turpis sit amet imperdiet. Praesent
-                    Class officelan nonatoureanor mauris laoreet, iaculis libero
-                    quis. Curabitur et tempus eri consequat tincidunt turpis sit
-                    amet imperdiet. Praesent nonatourean olei aptent taciti
-                    sociosqu ad litora torquent per.
+                    Le Club de langues du canton de Verneuil sur Seine est une
+                    association à but non-lucratif, dont les objectifs, précisés
+                    dans les statuts sont « de promouvoir et développer l’étude
+                    des langues étrangères, tant auprès des adultes que des
+                    enfants, et de favoriser les rencontres entre des personnes
+                    de culture et de langue différentes ».
                 </p>
                 <p class="cs-text">
-                    In consequat tincidunt turpis sit amet imperdiet. Praesent
-                    Class officelan nonatoureanor mauris laoreet, iaculis libero
-                    quis. Curabitur et tempus eri consequat tincidunt turpis sit
-                    amet imperdiet. Praesent nonatourean olei aptent taciti
-                    sociosqu ad litora torquent per.
+                    Il est implanté à Verneuil-sur-Seine, dans le département
+                    des Yvelines (78), dans des locaux affectés de manière
+                    exclusive par la commune de Verneuil sur Seine, tandis que
+                    les communes de Vernouillet et de Triel sur Seine mettent
+                    des salles à sa disposition. Ces trois communes le
+                    soutiennent également financièrement depuis sa création.
                 </p>
-                <div class="cs-flex-group">
-                    <p class="cs-flex-p">
-                        In consequat tincidunt turpis sit amet imperdiet.
-                        Praesent Classei consequat tincidunt turpis sit amet
-                        imperdiet for mind.
-                    </p>
-                    <span class="cs-name">Justin Time</span>
-                    <span class="cs-job">CEO-Founder</span>
-                    <img
-                        class="cs-quote-icon"
-                        loading="lazy"
-                        decoding="async"
-                        src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/quote-white.svg"
-                        alt="gavel"
-                        width="136"
-                        height="77"
-                    />
-                </div>
-                <a href="/projects" class="cs-button-solid">Our Projects</a>
+                <p class="cs-text">
+                    En 1995, le Club de langues a été agréé une première fois
+                    par la Direction Départementale de la Jeunesse et des Sports
+                    des Yvelines, en tant qu’organisme de Jeunesse et
+                    d'Éducation Populaire, et cet agrément a été renouvelé en
+                    2007 et en 2024.
+                </p>
+                <p class="cs-text">
+                    Le Club de langues du canton de Verneuil-sur-Seine est
+                    aussi, depuis son origine, un organisme de formation
+                    professionnelle continue, ce qui lui permet de signer des
+                    conventions avec des employeurs pour que ceux-ci puissent
+                    financer la formation de salariés.
+                </p>
+                <p class="cs-text">
+                    Le Club est dirigé par un Conseil d'Administration de huit
+                    bénévoles et emploie à temps partiel dix enseignants de
+                    langue maternelle, ainsi qu’une secrétaire et un agent de
+                    nettoyage.
+                </p>
+                <p class="cs-text">
+                    Depuis près de 40 ans, le Club accueille jusqu’à 300
+                    adhérents par an, dont les deux-tiers sont des jeunes de 4
+                    ans et demi à 17 ans.
+                </p>
+                <p class="cs-text">
+                    40% des adhérents sont vernoliens, 90% habitent le canton et
+                    les autres viennent d’une quinzaine de villes avoisinantes.
+                </p>
             </div>
         </div>
     </section>
-
-    {% include 'components/cta.html' %}
+    <section class="content-page-716 grey-light-bg">
+        <div class="cs-container">
+            <div class="cs-content">
+                <h1 class="cs-title">Un peu d'histoire</h1>
+                <p class="cs-text">
+                    Le Club de langues du canton de Triel Vernouillet Verneuil a
+                    pris le 13 juin 2015 le nom de Club de langues du canton de
+                    Verneuil sur Seine pour tenir compte des modifications de la
+                    carte territoriale résultant du décret du 21 février 2014.
+                    En effet, le canton de Triel sur Seine, qui était composé
+                    des trois communes de Triel sur Seine, Vernouillet et
+                    Verneuil sur Seine, a été remplacé par le canton de Verneuil
+                    sur Seine, qui comprend désormais treize communes (74.000
+                    habitants).
+                </p>
+                <p class="cs-text">
+                    La création officielle du Club le 10 janvier 1986 avait
+                    marqué le succès rencontré par l'initiative de la
+                    responsable du Centre socioculturel du Parc de Vernouillet,
+                    qui avait lancé en novembre 1984 un Club d'anglais animé par
+                    deux enseignantes. A noter que l'une d'elles, Janet, a
+                    enseigné au Club jusqu'à sa retraite en 2010, y a même
+                    conservé au-delà, jusqu'en juin 2019, une partie de ses
+                    cours, dans la limite autorisée du cumul emploi-retraite, et
+                    qu'elle a rejoint depuis le Conseil d'administration qui lui
+                    a décerné le titre de Membre d'honneur.
+                </p>
+                <p class="cs-text">
+                    Les cinquante adhérents de la première année étaient
+                    uniquement des adultes, mais, dès octobre 1988, était créée
+                    une section enfants, avec pendant trois ans l'aide des
+                    animateurs des Relais universitaires de France, puis
+                    totalement intégrée. En 1988 également, une deuxième langue
+                    a été ajoutée, l'espagnol, et en 1990 l'allemand. En 1996,
+                    ont démarré les cours d'italien ; en 1999, ceux de russe et
+                    en 2001 ceux de portugais. En octobre 2006, au départ de
+                    l'enseignante, le portugais a été remplacé par le chinois,
+                    très demandé. En 2007, une offre de perfectionnement en
+                    langue française pour étrangers a été ajoutée et en 2016 une
+                    septième langue étrangère, l'arabe littéraire. Pour toutes
+                    ces nouvelles langues, comme cela avait été le cas pour
+                    l'anglais, des groupes d'enfants, aussi bien que d'adultes,
+                    ont été constitués.
+                </p>
+            </div>
+        </div>
+    </section>
 {% endblock %}

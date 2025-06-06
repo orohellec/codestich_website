@@ -1,205 +1,214 @@
 /* PAGE-SPECIFIC STYLES FOR THE ABOUT PAGE */
 
 /*-- -------------------------- -->
-<---       Side By Side         -->
+<---        Content Page        -->
 <--- -------------------------- -*/
 
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-    #sbs {
+    .content-page-716 {
         padding: var(--sectionPadding);
+        /* clips the wave background from causing overflow issues when it goes off screen */
+        overflow: hidden;
+        position: relative;
+        z-index: 1;
 
         .cs-container {
+            width: 100%;
+            max-width: calc(1280 / 16 * 1rem);
+            margin: auto;
             display: flex;
             flex-direction: column;
-            justify-content: center;
             align-items: center;
-            margin: auto;
-            max-width: calc(1280 / 16 * 1rem);
+            /* 48px - 64px */
+            gap: clamp(3rem, 6vw, 4rem);
+            position: relative;
+        }
+
+        .cs-content {
+            /* set text align to left if content needs to be left aligned */
+            text-align: left;
             width: 100%;
-            row-gap: calc(40 / 16 * 1rem);
-        }
+            max-width: calc(738 / 16 * 1rem);
+            display: flex;
+            flex-direction: column;
+            /* centers content horizontally, set to flex-start to left align */
+            align-items: center;
 
-        .cs-left {
-            position: relative;
-            height: calc(636 / 16 * 1em);
-            /* using ems so we can use font size to scale the whole section */
-            width: calc(631 / 16 * 1em);
-            /* scaling the font size with the view width */
-            font-size: min(2.31vw, 0.7em);
-        }
-
-        .cs-picture {
-            position: absolute;
-            display: block;
-            border-radius: calc(24 / 16 * 1em);
-            /* clips img tag corners */
-            overflow: hidden;
             img {
-                position: absolute;
-                top: 0;
-                left: 0;
-                height: 100%;
                 width: 100%;
-                /* makes image act like a background image */
-                object-fit: cover;
+                height: auto;
+                margin: calc(16 / 16 * 1rem) 0;
+                display: block;
             }
         }
-
-        .cs-picture1 {
-            top: 0;
-            left: 0;
-            height: calc(581 / 16 * 1em);
-            width: calc(522 / 16 * 1em);
-        }
-
-        .cs-picture2 {
-            bottom: 0;
-            right: 0;
-            /* 6px - 12px */
-            border: clamp(0.375em, 1.5vw, 0.75em) solid #fff;
-            background-color: #fff;
-            height: calc(400 / 16 * 1em);
-            width: calc(414 / 16 * 1em);
-            box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 40px;
-        }
-
-        .cs-right {
-            margin: auto;
-            max-width: calc(542 / 16 * 1rem);
-        }
-
-        .cs-topper {
-            margin-bottom: calc(4 / 16 * 1rem);
-            text-align: left;
-        }
-
-        .cs-title {
-            max-width: calc(800 / 16 * 1rem);
-            text-align: left;
-        }
-
-        .cs-text {
-            margin-bottom: calc(16 / 16 * 1rem);
-            max-width: calc(750 / 16 * 1rem);
-            color: var(--bodyTextColor);
-            text-align: left;
-
-            &:last-of-type {
-                margin-bottom: calc(32 / 16 * 1rem);
-            }
-        }
-
-        .cs-flex-group {
-            position: relative;
-            border-radius: calc(16 / 16 * 1rem);
-            background-color: #f7f7f7;
-            /* 16px - 32px */
-            padding: clamp(1rem, 3vw, 2rem);
-        }
-
-        .cs-flex-p {
-            margin: 0 0 calc(16 / 16 * 1rem);
-            /* 14px - 16px */
-            font-size: clamp(0.875rem, 1.5vw, 1rem);
-            line-height: 1.5em;
-            color: #353535;
-        }
-
-        .cs-name {
-            display: block;
-            margin: 0 0 calc(4 / 16 * 1rem);
-            text-transform: uppercase;
-            font-size: calc(16 / 16 * 1rem);
-            line-height: 1.2em;
-            font-weight: bold;
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-weight: 700;
+            text-align: inherit;
+            margin: 0 0 calc(16 / 16 * 1rem) 0;
             color: var(--headerColor);
         }
 
-        .cs-job {
-            display: block;
-            font-size: calc(14 / 16 * 1rem);
-            line-height: 1.5em;
-            color: #353535;
+        h2 {
+            font-size: calc(32 / 16 * 1rem);
+            margin-top: calc(32 / 16 * 1rem);
         }
 
-        .cs-quote-icon {
-            position: absolute;
-            bottom: calc(0 / 16 * 1rem);
-            /* 16px - 32px */
-            right: clamp(1rem, 4vw, 2rem);
-            height: auto;
-            /* 60px - 136px */
-            width: clamp(3.75rem, 10vw, 8.5rem);
+        h3 {
+            font-size: calc(24 / 16 * 1rem);
+            color: var(--primary);
+        }
+
+        h4,
+        h5,
+        h6 {
+            font-size: calc(20 / 16 * 1rem);
         }
 
         .cs-button-solid {
-            margin-top: calc(32 / 16 * 1rem);
-        }
-    }
-}
-
-/* Desktop - 1024px */
-@media only screen and (min-width: 64rem) {
-    #sbs {
-        .cs-container {
-            flex-flow: row;
-            justify-content: space-between;
-            gap: calc(52 / 16 * 1rem);
+            margin-bottom: calc(32 / 16 * 1rem);
         }
 
-        .cs-left {
-            font-size: min(1.2vw, 1em);
-            flex: none;
+        .cs-color {
+            color: var(--primary);
         }
 
-        .cs-right {
-            margin: 0;
-        }
-    }
-}
+        p {
+            font-size: var(--bodyFontSize);
+            line-height: 1.5em;
+            text-align: inherit;
+            width: 100%;
+            margin: 0 0 calc(16 / 16 * 1rem) 0;
+            color: var(--bodyTextColor);
+            &:last-of-type {
+                margin-bottom: calc(32 / 16 * 1rem);
+            }
 
-/* Dark Mode */
-@media only screen and (min-width: 0rem) {
-    body.dark-mode {
-        #sbs {
-            .cs-left {
-                &:before,
-                &:after {
-                    background: var(--accent);
+            a {
+                font-size: inherit;
+                line-height: inherit;
+                text-decoration: underline;
+                color: var(--primary);
+            }
+        }
+
+        ol,
+        ul {
+            padding-left: calc(24 / 16 * 1rem);
+            margin: 0 0 calc(32 / 16 * 1rem) 0;
+            color: var(--bodyTextColor);
+            display: flex;
+            flex-direction: column;
+            gap: calc(16 / 16 * 1rem);
+        }
+
+        ul {
+            li {
+                list-style: none;
+                color: inherit;
+                position: relative;
+
+                &:before {
+                    /* custom list bullet */
+                    content: "";
+                    width: 3px;
+                    height: 3px;
+                    background: currentColor;
+                    opacity: 1;
+                    border-radius: 50%;
+                    position: absolute;
+                    display: block;
+                    top: calc(10 / 16 * 1rem);
+                    left: calc(-12 / 16 * 1rem);
                 }
             }
+        }
 
-            .cs-picture2 {
-                /* 6px - 12px */
-                border: clamp(0.375em, 1.5vw, 0.75em) solid var(--dark);
-                background-color: var(--dark);
-            }
+        .cs-image-group {
+            /* scales the whole section down and ties the font size to the vw and stops at 70% of the vale of 1em, changes at desktop */
+            font-size: min(1vw, 1em);
+            /* everything inside this box is in ems so we can scale it all down proportionally with a font size */
+            width: calc(542 / 16 * 1rem);
+            height: calc(773 / 16 * 1rem);
+            display: none;
+            /* prevents flexbox from squishing it */
+            flex: none;
+            position: relative;
+            z-index: 1;
+        }
 
-            .cs-topper {
-                color: var(--primaryLight);
-            }
+        .cs-picture {
+            width: calc(542 / 16 * 1rem);
+            height: calc(647 / 16 * 1rem);
+            border-radius: calc(285 / 16 * 1rem);
+            border: calc(12 / 16 * 1rem) solid #fff;
+            background-color: #f7f7f7;
+            /* prevents border from affecting height and width */
+            box-sizing: border-box;
+            /* clips img tag corners */
+            overflow: hidden;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
 
-            .cs-title,
-            .cs-text,
-            .cs-h3,
-            .cs-flex-p,
-            .cs-name {
-                color: var(--bodyTextColorWhite);
-            }
-
-            .cs-flex-group {
-                background-color: var(--accent);
-            }
-
-            .cs-job {
-                opacity: 0.8;
-                color: var(--bodyTextColorWhite);
-            }
-
-            .cs-quote-icon {
-                opacity: 0.2;
+            img {
+                width: 100%;
+                height: 100%;
+                /* makes it act like a background image */
+                object-fit: cover;
+                position: absolute;
+                top: 0;
+                left: 0;
             }
         }
+
+        .cs-flower {
+            width: calc(362 / 16 * 1rem);
+            height: auto;
+            display: block;
+            position: absolute;
+            bottom: calc(-38 / 16 * 1rem);
+            right: calc(-48 / 16 * 1rem);
+            z-index: -1;
+            transform: rotate(142deg);
+        }
+
+        .cs-sense {
+            width: calc(80 / 16 * 1rem);
+            height: auto;
+            position: absolute;
+            top: calc(-4 / 16 * 1rem);
+            left: calc(10 / 16 * 1rem);
+            transform: rotate(90deg);
+        }
+
+        .cs-background {
+            display: none;
+        }
+    }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    .content-page-716 {
+        .cs-container {
+            flex-direction: row;
+            align-items: flex-start;
+        }
+
+        .cs-content {
+            margin: auto;
+        }
+    }
+}
+
+/* Large Desktop 1300px */
+@media only screen and (min-width: 81.25rem) {
+    .content-page-716 {
     }
 }

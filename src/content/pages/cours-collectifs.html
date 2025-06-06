@@ -1,0 +1,90 @@
+---
+title: "Cours collectifs | Club de langues"
+description: "Description for <meta> description and OG tags"
+preloadImg: "/assets/images/imagename.format"
+permalink: "cours-collectifs/"
+eleventyNavigation:
+    key: Cours collectifs
+    order: 1
+    parent: Formations
+---
+
+{% extends "layouts/base.html" %}
+{% from "components/banner.html" import banner %}
+
+{% block head %}
+    <!-- Any page-specific tags that belong in the <head>, such as a page-specific stylesheet -->
+    <link rel="stylesheet" href="/assets/css/cours-collectifs.css" />
+    <link rel="stylesheet" href="/assets/css/components/cta.css" />
+    <link rel="stylesheet" href="/assets/css/components/banner.css" />
+{% endblock %}
+
+{% block body %}
+    <!-- Page HTML goes here, without a <main> wrapper. The <main> tag is already presented in layouts/base.html -->
+    <!-- ============================================ -->
+    <!--                   Banner                     -->
+    <!-- ============================================ -->
+
+    {{ banner("/assets/images/collectif.jpeg") }}
+
+    <!-- ============================================ -->
+    <!--                   Content Page               -->
+    <!-- ============================================ -->
+    <section id="content-page-715">
+        <div class="cs-container">
+            <div class="cs-content">
+                <h1 class="cs-title">
+                    Nos cours
+                    <span class="cs-color"> collectifs</span>
+                </h1>
+                <h2>Enfants - Adolescents - Adultes</h2>
+                <p class="cs-text">
+                    Les cours collectifs, orientés principalement sur l’oral,
+                    réunissent des petits groupes de niveau comparable de 5 à 8
+                    personnes pendant 28 séances, hors vacances scolaires. Ils
+                    durent 1h pour les enfants et les adolescents et 1h30 pour
+                    les adultes. Ils peuvent être donnés en visio, sur demande,
+                    aux groupes d’adultes ou d’adolescents de 3 ou 4 personnes.
+                </p>
+                <p class="cs-text">
+                    L’inscription dans un cours n’est confirmée qu’après
+                    validation du niveau par l’enseignant(e).
+                </p>
+                <p class="cs-text">
+                    En l’absence de cours collectif de niveau adéquat,
+                    possibilité de cours particulier face-à-face ou à deux
+                    (twins), qui peuvent également être donnés en visio aux
+                    adultes et aux adolescents, sur demande.
+                </p>
+                <p class="cs-text">
+                    NB : Les niveaux scolaires ne sont indiqués qu’à titre de
+                    référence à l’âge des enfants et des adolescents. Ce qui est
+                    déterminant, c’est le niveau de connaissances acquises.
+                </p>
+                <h2>Mini-groupes</h2>
+                <p class="cd-text">
+                    Des cours de mini-groupes de 3 ou 4 personnes,
+                    intermédiaires entre les cours collectifs et les cours
+                    particuliers, peuvent également être mis en place, mais
+                    seulement au retour des vacances d’automne. En effet, tout
+                    cours comportant au moins 2 inscrits est ouvert normalement
+                    début octobre, dans l’attente de possibles inscriptions
+                    tardives.
+                </p>
+                <p class="cs-text">
+                    Le coût des mini-groupes est identique à celui des groupes
+                    de 5 à 8 personnes. Toutefois, les élèves, bénéficiant de
+                    plus d’attention individuelle et de temps de parole, n’ont
+                    droit qu’à 22 séances annuelles et la durée des séances est
+                    ramenée à 50 minutes pour les enfants et les adolescents et
+                    à 1h10 pour les adultes.
+                </p>
+                <h2>Listes prévisionnelles des cours (2025 - 2026)</h2>
+                <a class="cs-button-solid" aria-label="" href="">
+                    Découvrir nos cours au format pdf
+                </a>
+            </div>
+        </div>
+    </section>
+    {% include "components/cta.html" %}
+{% endblock %}

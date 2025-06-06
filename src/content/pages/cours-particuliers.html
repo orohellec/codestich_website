@@ -10,11 +10,69 @@ eleventyNavigation:
 ---
 
 {% extends "layouts/base.html" %}
+{% from "components/banner.html" import banner %}
 
 {% block head %}
     <!-- Any page-specific tags that belong in the <head>, such as a page-specific stylesheet -->
+    <link rel="stylesheet" href="/assets/css/contentPages.css" />
+    <link rel="stylesheet" href="/assets/css/components/cta.css" />
+    <link rel="stylesheet" href="/assets/css/components/banner.css" />
 {% endblock %}
 
 {% block body %}
     <!-- Page HTML goes here, without a <main> wrapper. The <main> tag is already presented in layouts/base.html -->
+    <!-- ============================================ -->
+    <!--                   Banner                     -->
+    <!-- ============================================ -->
+
+    {{ banner("/assets/images/collectif.jpeg") }}
+
+    <!-- ============================================ -->
+    <!--                   Content Page               -->
+    <!-- ============================================ -->
+    <section id="content-page-715">
+        <div class="cs-container">
+            <div class="cs-content">
+                <h1 class="cs-title">
+                    Nos cours
+                    <span class="cs-color"> particuliers</span>
+                </h1>
+                <h2>Enfants - Adolescents - Adultes</h2>
+                <p class="cs-text">
+                    La vocation du Club de langues est essentiellement
+                    d’organiser des cours collectifs en petits groupes de 5 à 8
+                    personnes, afin de jouer sur la synergie du groupe et de
+                    privilégier l’expression orale. Il s’agit avant tout de
+                    créer un groupe d’interlocuteurs de même niveau.
+                </p>
+                <p class="cs-text">
+                    Toutefois, lorsqu’un tel groupe ne peut être constitué, ou
+                    lorsqu’un adhérent a un projet personnel précis, comme de se
+                    préparer à un examen de langue programmé ou d’augmenter sa
+                    performance au test du TOEIC, par exemple, le Club de
+                    langues peut proposer des cours particuliers, éventuellement
+                    en visio.
+                </p>
+                <p class="cs-text">
+                    Ces cours ne durent que 50 minutes pour les enfants et les
+                    adolescents et 1h pour les adultes. Ils se réservent par
+                    série renouvelable de 10 cours.
+                </p>
+                <h2>Cours face-à-face ou cours twin</h2>
+                <p class="cs-text">
+                    Le cours particulier classique est un cours face à face avec
+                    l’enseignant(e). Son avantage est évidemment de correspondre
+                    très précisément au niveau et aux besoins de la personne.
+                </p>
+                <p class="cs-text">
+                    Mais, afin d’en réduire le coût, il est possible de
+                    s’inscrire avec un partenaire, de niveau jugé comparable par
+                    l’enseignant(e), et d’en partager le coût par moitié : c’est
+                    ce que le Club de langues appelle des cours twins (cours
+                    jumeaux).
+                </p>
+            </div>
+        </div>
+    </section>
+    {% include "components/cta.html" %}
 {% endblock %}

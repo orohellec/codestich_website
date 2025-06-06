@@ -10,11 +10,45 @@ eleventyNavigation:
 ---
 
 {% extends "layouts/base.html" %}
+{% from "components/banner.html" import banner %}
 
 {% block head %}
     <!-- Any page-specific tags that belong in the <head>, such as a page-specific stylesheet -->
+    <link rel="stylesheet" href="/assets/css/contentPages.css" />
+    <link rel="stylesheet" href="/assets/css/components/cta.css" />
+    <link rel="stylesheet" href="/assets/css/components/banner.css" />
 {% endblock %}
 
 {% block body %}
     <!-- Page HTML goes here, without a <main> wrapper. The <main> tag is already presented in layouts/base.html -->
+    <!-- ============================================ -->
+    <!--                   Banner                     -->
+    <!-- ============================================ -->
+
+    {{ banner("/assets/images/revisions.jpg") }}
+
+    <!-- ============================================ -->
+    <!--                   Content Page               -->
+    <!-- ============================================ -->
+    <section id="content-page-715">
+        <div class="cs-container">
+            <div class="cs-content">
+                <h1 class="cs-title">
+                    Stages / Préparation aux
+                    <span class="cs-color"> examens</span>
+                </h1>
+                <p class="cs-text">
+                    Des stages peuvent être organisés pendant les week-ends ou
+                    les vacances scolaires, en fonction des demandes : un stage
+                    peut comprendre de 3 à 6 personnes de niveau de langue
+                    comparable.
+                </p>
+                <p class="cs-text">
+                    En dehors des stages, des cours collectifs sont spécialement
+                    destinés aux jeunes qui préparent le Baccalauréat.
+                </p>
+            </div>
+        </div>
+    </section>
+    {% include "components/cta.html" %}
 {% endblock %}

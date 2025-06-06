@@ -10,11 +10,90 @@ eleventyNavigation:
 ---
 
 {% extends "layouts/base.html" %}
+{% from "components/banner.html" import banner %}
 
 {% block head %}
     <!-- Any page-specific tags that belong in the <head>, such as a page-specific stylesheet -->
+    <link rel="stylesheet" href="/assets/css/contentPages.css" />
+    <link rel="stylesheet" href="/assets/css/components/cta.css" />
+    <link rel="stylesheet" href="/assets/css/components/banner.css" />
 {% endblock %}
 
 {% block body %}
     <!-- Page HTML goes here, without a <main> wrapper. The <main> tag is already presented in layouts/base.html -->
+    <!-- ============================================ -->
+    <!--                   Banner                     -->
+    <!-- ============================================ -->
+
+    {{ banner("/assets/images/reunion.jpg") }}
+
+    <!-- ============================================ -->
+    <!--                   Content Page               -->
+    <!-- ============================================ -->
+    <section id="content-page-715">
+        <div class="cs-container">
+            <div class="cs-content">
+                <h1 class="cs-title">
+                    Formations
+                    <span class="cs-color"> Professionnelle</span>
+                </h1>
+                <p class="cs-text">
+                    Le Club de langues du canton de Verneuil-sur-Seine est
+                    aussi, depuis son origine, un organisme de formation
+                    professionnelle continue, ce qui lui permet de signer des
+                    Conventions avec des employeurs pour que ceux-ci puissent
+                    financer la formation de salariés.
+                </p>
+                <p class="cs-text">
+                    Le Club ne délivre pas de diplôme mais s’engage, si
+                    l’employeur le désire, à préparer et à présenter les
+                    salariés sous Convention de formation aux tests et examens
+                    officiels de la langue étudiée : anglais, allemand, arabe
+                    littéraire, chinois, espagnol, français langue étrangère,
+                    italien ou russe (TOEIC, Goethe Institut, CIMA, HSK, DELE,
+                    DELF, CILS ou TRIKI), afin de faire CERTIFIER les progrès
+                    obtenus.
+                </p>
+                <p class="cs-text">
+                    Toutefois, les profondes modifications de la Formation
+                    professionnelle, initiées par la loi du 1er août 2018, ne
+                    permettent pas, pour l'heure, de faire bénéficier les
+                    salariés intéressés de la prise en charge, par les nouveaux
+                    Opérateurs de Compétences (OPCO), des formations dispensées
+                    par le Club.
+                </p>
+                <p class="cs-text">
+                    Les entrepreneurs individuels, pour eux-mêmes, et les
+                    employeurs, pour leur personnel, conservent néanmoins la
+                    faculté de signer des Conventions de formation avec le Club
+                    de langues et de financer ces formations dans des conditions
+                    de coût, de localisation et d’horaires que les grands
+                    opérateurs ne peuvent pas forcément leur offrir.
+                </p>
+                <p class="cd-text">
+                    L’exercice du Club étant à cheval sur deux années, puisqu’il
+                    suit le rythme de l’année scolaire, il est possible de
+                    signer une Convention sur l’année en cours ou sur l’année
+                    suivante.
+                </p>
+                <p class="cs-text">
+                    Le salarié peut s’inscrire en cours particulier ou en cours
+                    collectif, en dehors des horaires de travail ou pendant ces
+                    heures, en cas d’accord de l’employeur. En cours
+                    particulier, il peut demander à bénéficier du cours en
+                    visio.
+                </p>
+                <p class="cs-text">
+                    Il est également possible d’organiser des stages
+                    d’entreprise, dans les locaux du Club ou dans ceux de
+                    l’entreprise, pour des groupes de 3 à 6 personnes de niveau
+                    comparable.
+                </p>
+                <a class="cs-button-solid" aria-label="" href="">
+                    Convention au format pdf
+                </a>
+            </div>
+        </div>
+    </section>
+    {% include "components/cta.html" %}
 {% endblock %}

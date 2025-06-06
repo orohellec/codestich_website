@@ -42,21 +42,22 @@
                 display: block;
             }
         }
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
-            font-weight: 700;
-            text-align: inherit;
-            margin: 0 0 calc(16 / 16 * 1rem) 0;
-            color: var(--headerColor);
-        }
+        // I commented the css affecting the h2 because it was annoying but I let it here if needed to add more content
+        // h2,
+        // h3,
+        // h4,
+        // h5,
+        // h6 {
+        //     font-weight: 700;
+        //     text-align: inherit;
+        //     margin: 0 0 calc(16 / 16 * 1rem) 0;
+        //     color: var(--headerColor);
+        // }
 
-        h2 {
-            font-size: calc(32 / 16 * 1rem);
-            margin-top: calc(32 / 16 * 1rem);
-        }
+        // h2 {
+        //     font-size: calc(32 / 16 * 1rem);
+        //     margin-top: calc(32 / 16 * 1rem);
+        // }
 
         h3 {
             font-size: calc(24 / 16 * 1rem);

@@ -1,0 +1,152 @@
+---
+title: "Activités Culturelles | Club de langues"
+description: "Les enseignants du Club de langues du canton de Verneuil sur Seine organisent des activités culturelles pour vous permettre de découvrir sous plusieurs angles la culture des pays qui parlent la langue étudiée"
+permalink: "activites-culturelles/"
+eleventyNavigation:
+    key: Activités culturelles
+    order: 400
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <!-- Any page-specific tags that belong in the <head>, such as a page-specific stylesheet -->
+    <link rel="stylesheet" href="/assets/css/activities.css" />
+{% endblock %}
+
+{% block body %}
+    <!-- Page HTML goes here, without a <main> wrapper. The <main> tag is already presented in layouts/base.html -->
+    <!-- ============================================ -->
+    <!--                   Banner                     -->
+    <!-- ============================================ -->
+
+    <div id="banner-849">
+        <!--Background Image-->
+        <picture class="cs-background" aria-hidden="true">
+            <!--Mobile Image-->
+            <source
+                media="(max-width: 600px)"
+                srcset="
+                    {% getUrl "/assets/images/activities/activite-2.jpg" | resize({width: 400, height: 200, position: "center"}) %}
+                "
+            />
+            <!--Tablet and above Image-->
+            <source
+                media="(min-width: 601px)"
+                srcset="
+                    {% getUrl "/assets/images/activities/activite-2.jpg" | resize({width: 2500, height: 1000, position: "center"}) %}
+                "
+            />
+            <img
+                loading="lazy"
+                decoding="async"
+                src="{% getUrl "/assets/images/activities/activite-2.jpg" | resize({width: 2500, height: 1000, position: "center"}) %}"
+                alt="yoga"
+                width="1280"
+                height="568"
+            />
+        </picture>
+    </div>
+
+    <!-- ============================================ -->
+    <!--                 Content Page                 -->
+    <!-- ============================================ -->
+
+    <!-- ============================================ 
+    This Stitch is used for content heavy interior pages
+    that have no design or layout.  Often times these are 
+    content silos where you talk extensively about a topic
+    to educate your visitors and rank on Google for the 
+    content.  These are great for pages that have a TON
+    of content.  Design isn't important here, it's all 
+    about making the content accessible and easy to read.
+================================================= -->
+
+    <section id="content-page-849">
+        <div class="cs-container">
+            <div class="cs-content">
+                <h1 class="cs-title">
+                    Activités<span class="cs-color"> Culturelles</span>
+                </h1>
+                <p class="cs-text">
+                    Outre les cours de langues, les enseignants du Club de
+                    langues du canton de Verneuil sur Seine organisent des
+                    activités culturelles pour vous permettre de découvrir sous
+                    plusieurs angles la culture des pays qui parlent la langue
+                    étudiée.
+                </p>
+                <p class="cs-text">
+                    Non seulement, un cours chaque trimestre est axé sur un
+                    aspect de la culture de la langue étudiée, mais, en outre,
+                    deux fois par an au moins les enseignants proposent à leurs
+                    groupes une activité culturelle, en dehors des cours et en
+                    plus de l’accès gratuit à la bibliothèque-vidéothèque du
+                    Club : films en version originale, visite d'expositions,
+                    pièces de théâtre, séances de cuisine, dîners de groupe avec
+                    conversations dans la langue étudiée, débats avec un
+                    intervenant extérieur, voire voyages organisés, soit par les
+                    enseignants, soit par l'un des comités de jumelage du
+                    canton, etc.
+                </p>
+                <p class="cs-text">
+                    Chaque année, également, les enseignants organisent avec
+                    leurs groupes d’enfants et d’adolescents, une présentation
+                    publique aux familles de chants, de poèmes, de saynètes dans
+                    les différentes langues étudiées.
+                </p>
+            </div>
+            <div class="cs-image-group">
+                <!--Top Picture-->
+                <picture class="cs-picture">
+                    <!--Mobile Image-->
+                    <source
+                        media="(max-width: 600px)"
+                        srcset="
+                            {% getUrl "/assets/images/activities/activite-3.jpg" %}
+                        "
+                    />
+                    <!--Tablet and above Image-->
+                    <source
+                        media="(min-width: 601px)"
+                        srcset="
+                            {% getUrl "/assets/images/activities/activite-3.jpg" %}
+                        "
+                    />
+                    <img
+                        decoding="async"
+                        src="{% getUrl "/assets/images/activities/activite-3.jpg" %}"
+                        alt="person"
+                        width="542"
+                        height="520"
+                        aria-hidden="true"
+                    />
+                </picture>
+                <!--Top Picture-->
+                <picture class="cs-picture">
+                    <!--Mobile Image-->
+                    <source
+                        media="(max-width: 600px)"
+                        srcset="
+                            {% getUrl "/assets/images/activities/activite-1.jpg" %}
+                        "
+                    />
+                    <!--Tablet and above Image-->
+                    <source
+                        media="(min-width: 601px)"
+                        srcset="
+                            {% getUrl "/assets/images/activities/activite-1.jpg" %}
+                        "
+                    />
+                    <img
+                        decoding="async"
+                        src="{% getUrl "/assets/images/activities/activite-1.jpg" %}"
+                        alt="person"
+                        width="542"
+                        height="520"
+                        aria-hidden="true"
+                    />
+                </picture>
+            </div>
+        </div>
+    </section>
+{% endblock %}

@@ -1,0 +1,45 @@
+{# we send an array of objects to the macro below #}
+{% macro teamMembers(name, members, bgColor) %}
+    <section class="gallery-43 {% if bgColor %}add-bg-color{% endif %}">
+        <div class="cs-container">
+            <div class="cs-content">
+                <h2 class="cs-title">{{ name }}</h2>
+            </div>
+            <div class="cs-image-group">
+                {% for person in members %}
+                    <div class="cs-item">
+                        <picture class="cs-picture">
+                            <source
+                                media="(max-width: 600px)"
+                                srcset="
+                                    {% getUrl person.pictureUrl | resize({width: 750, height: 750, position: 'top'}) %}
+                                "
+                            />
+                            <source
+                                media="(min-width: 601px)"
+                                srcset="
+                                    {% getUrl person.pictureUrl | resize({width: 750, height: 750, position: 'top'}) %}
+                                "
+                            />
+                            <img
+                                loading="lazy"
+                                decoding="async"
+                                src="{% getUrl person.pictureUrl | resize({width: 750, height: 750, position: 'top'}) %}"
+                                alt="fancy house"
+                                width="346"
+                                height="500"
+                            />
+                        </picture>
+                        <!-- Hover Box -->
+                        <div class="cs-hover-box">
+                            <h3 class="cs-h3">{{ person.name }}</h3>
+                            {% for info in person.informations %}
+                                <p class="cs-hover-box-text">{{ info }}</p>
+                            {% endfor %}
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+{% endmacro %}

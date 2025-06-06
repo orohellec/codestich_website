@@ -1,0 +1,23 @@
+---
+title: "Notre égquipe"
+description: "Équipe de direction et professeurs du club de langues"
+permalink: "notre-equipe/"
+eleventyNavigation:
+    key: Notre équipe
+    order: 200
+    parent: À propos
+---
+
+{% extends "layouts/base.html" %}
+{% from "components/teamMembers.html" import teamMembers %}
+
+{% block head %}
+    <link rel="stylesheet" href="/assets/css/team.css" />
+    <link rel="stylesheet" href="/assets/css/components/teamMembers.css" />
+{% endblock %}
+
+{% block body %}
+
+    {{ teamMembers("Équipe de direction", team.management, false) }}
+    {{ teamMembers("Nos enseignants", team.teachers, true ) }}
+{% endblock %}

@@ -1,11 +1,10 @@
 ---
-title: "Contact | Code Stitch Web Designs"
-description: "Meta description for the page"
-preloadImg: "/assets/images/cabinets2.jpg"
+title: "Contact | Club de langues"
+description: "Nous contacter"
 permalink: "contact/"
 eleventyNavigation:
     key: Contact
-    order: 600
+    order: 10000
     hideOnDesktop: true
 ---
 
@@ -13,145 +12,132 @@ eleventyNavigation:
 
 {% block head %}
     <link rel="stylesheet" href="/assets/css/contact.css" />
+    <link rel="stylesheet" href="/assets/css/contentPages.css" />
 {% endblock %}
 
 {% block body %}
-    <!-- ============================================ -->
-    <!--                    LANDING                   -->
-    <!-- ============================================ -->
-
-    <section id="int-hero">
-        <h1 id="home-h">Contact Us</h1>
-        <picture>
-            <source
-                media="(max-width: 600px)"
-                srcset="/assets/images/cabinets2-m.jpg"
-            />
-            <source
-                media="(min-width: 601px)"
-                srcset="/assets/images/cabinets2.jpg"
-            />
-            <img
-                aria-hidden="true"
-                decoding="async"
-                src="/assets/images/cabinets2.jpg"
-                alt="kitchen cabinets"
-                loading="eager"
-                width="2500"
-                height="1667"
-            />
-        </picture>
+    {# <!-- ============================================ -->
+    <!--                   Content Page               -->
+    <!-- ============================================ --> #}
+    <section id="content-page-715">
+        <div class="cs-container">
+            <div class="cs-content">
+                <h1 class="cs-title">
+                    Informations pratiques /
+                    <span class="cs-color"> Contact</span>
+                </h1>
+                <h2>Comment s'inscrire?</h2>
+                <p class="cs-text">Les inscriptions peuvent être prises :</p>
+                <ul>
+                    <li>
+                        Au cours des forums des associations, début septembre
+                    </li>
+                    <li>
+                        Au cours des journées portes ouvertes au Club à la
+                        mi-juin et dans les trois semaines qui suivent les
+                        Forums
+                    </li>
+                    <li>
+                        Toute l'année auprès du secrétariat ou par
+                        correspondance
+                    </li>
+                </ul>
+                <h2>Documents utiles (format pdf)</h2>
+                <a class="cs-button-solid" href=""
+                    >Liste des cours collectifs</a
+                >
+                <a class="cs-button-solid" href=""
+                    >Convention formation professionnelle</a
+                >
+                <a class="cs-button-solid" href="">Fiches d'inscription</a>
+            </div>
+        </div>
     </section>
 
     <!-- ============================================ -->
-    <!--                Contact Form                  -->
+    <!--                   Contact                    -->
     <!-- ============================================ -->
 
-    <section id="cs-contact">
+    <section id="contact-569">
         <div class="cs-container">
-            <form id="cs-form" name="Contact Form" method="post">
+            <div class="cs-left">
                 <div class="cs-content">
-                    <span class="cs-topper">Contact</span>
-                    <h2 class="cs-title">Get in Touch</h2>
+                    <h2 class="cs-title">Secrétariat</h2>
                     <p class="cs-text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Ridiculus elementum ullamcorper ipsum porttitor aliquam.
-                        Id magna urna ultrices odio pulvinar. Sed ut.
+                        Permanences les lundis, mercredis et jeudis de 14h à
+                        19h, du 1er septembre au 30 juin, sauf congés scolaires
+                        et jours fériés.
                     </p>
                 </div>
-                <label>
-                    Name
-                    <input
-                        required
-                        type="text"
-                        id="name"
-                        name="name"
-                        placeholder="Name"
-                    />
-                </label>
-                <label>
-                    Email
-                    <input
-                        required
-                        type="text"
-                        id="email"
-                        name="email"
-                        placeholder="Email"
-                    />
-                </label>
-                <label>
-                    Phone
-                    <input
-                        required
-                        type="text"
-                        id="phone"
-                        name="phone"
-                        placeholder="Phone"
-                    />
-                </label>
-                <label>
-                    How Did You Find Us
-                    <input
-                        type="text"
-                        id="find"
-                        name="find-us"
-                        placeholder="How did you find us?"
-                    />
-                </label>
-                <label class="cs-label-message">
-                    Message
-                    <textarea
-                        required
-                        name="Message"
-                        id="message"
-                        placeholder="Write message..."
-                    ></textarea>
-                </label>
-                <button class="cs-button-solid" type="submit">
-                    Submit Message
-                </button>
-            </form>
-            <div class="cs-right-section">
-                <!--Email-->
-                <span class="cs-header">Email</span>
-                <a class="cs-link" href="mailto:{{ client.email }}"
-                    >{{ client.email }}</a
+                <!--Form-->
+                <form
+                    class="cs-form"
+                    id="cs-form-569"
+                    name="Contact Form"
+                    method="post"
                 >
-                <!--Phone-->
-                <span class="cs-header">Phone</span>
-                <a class="cs-link" href="tel:{{ client.phoneForTel }}"
-                    >{{ client.phoneFormatted }}</a
-                >
+                    <label class="cs-label">
+                        Name
+                        <input
+                            class="cs-input"
+                            required
+                            type="text"
+                            id="name-569"
+                            name="name"
+                            placeholder="Nom"
+                        />
+                    </label>
+                    <label class="cs-label">
+                        Email
+                        <input
+                            class="cs-input"
+                            required
+                            type="text"
+                            id="email-569"
+                            name="email"
+                            placeholder="Email"
+                        />
+                    </label>
+                    <label class="cs-label cs-message">
+                        Message
+                        <textarea
+                            class="cs-input cs-textarea"
+                            required
+                            name="Message"
+                            id="message-569"
+                            placeholder="Écrivez votre message..."
+                        ></textarea>
+                    </label>
+                    <button class="cs-submit" type="submit">Envoyer</button>
+                </form>
+            </div>
+            <div class="cs-right">
                 <!--Address-->
-                <span class="cs-header">Address</span>
-                <a class="cs-link" href="{{ client.address.mapLink }}">
-                    {{ client.address.lineOne }},
-                    <br />
-                    {{ client.address.lineTwo }},
-                    <br />
-                    <span class="cs-block">
-                        {{ client.address.city }}
-                        {{ client.address.state }}
-                        {{ client.address.zip }}
-                    </span>
-                </a>
-
-                <!-- Background Image-->
-                <picture class="cs-bg-picture">
-                    <source
-                        media="(min-width: 601px)"
-                        srcset="/assets/images/skyscraper.jpg"
-                    />
-                    <img
-                        aria-hidden="true"
-                        decoding="async"
-                        src="/assets/images/skyscraper.jpg"
-                        alt="building"
-                        loading="lazy"
-                        width="2500"
-                        height="1667"
-                    />
-                </picture>
+                <div class="cs-flex">
+                    <span class="cs-header">Adresse</span>
+                    <a href="" class="cs-link"
+                        >6 rue Saint Martin<br />
+                        78480 Verneuil-sur-Seine</a
+                    >
+                </div>
+                <!--Contacts-->
+                <div class="cs-flex">
+                    <span class="cs-header">Téléphone</span>
+                    <a href="" class="cs-link cs-phone">01 39 65 87 86</a>
+                </div>
+                <div class="cs-flex">
+                    <span class="cs-header">Emails</span>
+                    <p>
+                        <strong>Secrétariat</strong><br />adm@clubdelangues.org
+                    </p>
+                    <p>
+                        <strong>Gestion financière administrative</strong
+                        ><br />gestion@clubdelangues.org
+                    </p>
+                    <p>
+                        <strong>Direction</strong><br />asso@clubdelangues.org
+                    </p>
+                </div>
             </div>
         </div>
     </section>

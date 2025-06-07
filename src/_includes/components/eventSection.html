@@ -1,0 +1,97 @@
+{% macro eventSection(name, eventData) %}
+    <section id="events-1652">
+        <div class="cs-container">
+            <div class="cs-events">
+                <h2 class="cs-title">{{ name }}</h2>
+                {% if eventData.length > 0 %}
+                <ul class="cs-card-group">
+                    {% for event in eventData %}
+                        <li class="cs-item">
+                            <span class="cs-date">
+                                <strong>{{ event.startDay }}</strong>
+                                {{ event.startMonth }} {{ event.startYear }}
+                            </span>
+                            <div class="cs-info-wrapper">
+                                <div class="cs-info">
+                                    <h3 class="cs-h3">{{ event.name }}</h3>
+                                    {% if event.description %}
+                                        <p class="cs-text">
+                                            {{ event.description }}
+                                        </p>
+                                    {% endif %}
+                                    {% if event.adress %}
+                                    <span class="cs-location">
+                                        <strong>Adresse: </strong
+                                        >{{ event.adress }}
+                                    {% endif %}
+                                    </span>
+                                    <span class="cs-time">
+                                        <img
+                                            class="cs-icon"
+                                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gold-clock.svg"
+                                            alt="icon"
+                                            width="24"
+                                            height="24"
+                                            loading="lazy"
+                                            decoding="async"
+                                            aria-hidden="true"
+                                        />
+                                        {% if event.startHour and event.endHour %}
+                                        {{ event.startHour }}h{{ event.startMinute }}
+                                        -
+                                        {{ event.endHour }}h{{ event.endMinute }}
+                                        {% endif %}
+                                    </span>
+                                </div>
+                                {# <div class="cs-button-wrapper">
+                                    <a href="" class="cs-button-solid"
+                                        >Buy Ticket</a
+                                    >
+                                </div> #}
+                            </div>
+                        </li>
+                    {% endfor %}
+                </ul>
+                {% else %}
+                  <p class="cs-text" style="text-align: center">Aucun événement prévu pour le moment</p>
+                {% endif %}
+                    {% for event in events.forumEvents %}
+                        <li class="cs-item">
+                            <span class="cs-date">
+                                <strong>26</strong>
+                                Oct
+                            </span>
+                            <div class="cs-info-wrapper">
+                                <div class="cs-info">
+                                    <h3 class="cs-h3">
+                                        Business Transformation Summit
+                                    </h3>
+                                    <span class="cs-location"
+                                        >1250 23rd Street NW, DC 20037</span
+                                    >
+                                    <span class="cs-time">
+                                        <img
+                                            class="cs-icon"
+                                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gold-clock.svg"
+                                            alt="icon"
+                                            width="24"
+                                            height="24"
+                                            loading="lazy"
+                                            decoding="async"
+                                            aria-hidden="true"
+                                        />
+                                        12:00AM - 02:00PM
+                                    </span>
+                                </div>
+                                <div class="cs-button-wrapper">
+                                    <a href="" class="cs-button-solid"
+                                        >Buy Ticket</a
+                                    >
+                                </div>
+                            </div>
+                        </li>
+                    {% endfor %}
+            </div>
+        </div>
+    </section>
+    {% endmacro %}

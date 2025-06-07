@@ -103,14 +103,43 @@ const events = [
     },
 ]
 
+const MONTHS_FR_SHORT = [
+  "Janv.", "Févr.", "Mars", "Avr.", "Mai", "Juin",
+  "Juil.", "Août", "Sept.", "Oct.", "Nov.", "Déc."
+];
+
+//useful for minutes to always have two digits for minutes
+// ex: 9h00 instead of 9h0
+function padZero(num) {
+  return num.toString().padStart(2, '0');
+}
+
 const cleanOrganisedEvents = events
   .filter(event => new Date(event.endDate) > new Date()) // keep only events who are not finished
-  .sort((a, b) => new Date(a.startDate) - new Date(b.startDate)); // order events from the closest to the furthest
+  .sort((a, b) => new Date(a.startDate) - new Date(b.startDate)) // order events from the closest to the furthest
+  .map(event => {
+    const start = new Date(event.startDate);
+    const end = new Date(event.endDate);
 
+    return {
+      ...event,
+      startDay: start.getDate(),
+      startMonth: MONTHS_FR_SHORT[start.getMonth()], // getMonth return a number between 0 and 11
+      startYear: start.getFullYear(),
+      startHour: start.getHours(),
+      startMinute: padZero(start.getMinutes()),
+
+      endDay: end.getDate(),
+      endMonth: MONTHS_FR_SHORT[end.getMonth()],
+      endYear: end.getFullYear(),
+      endHour: end.getHours(),
+      endMinute: padZero(end.getMinutes()),
+    }
+  })
 // Création des tableaux par type
-const jpoEvents = events.filter(event => event.type === "jpo");
-const forumEvents = events.filter(event => event.type === "forum");
-const stageEvents = events.filter(event => event.type === "stage");
+const jpoEvents = cleanOrganisedEvents.filter(event => event.type === "jpo");
+const forumEvents = cleanOrganisedEvents.filter(event => event.type === "forum");
+const stageEvents = cleanOrganisedEvents.filter(event => event.type === "stage");
 
 // Export multiple
 module.exports = {

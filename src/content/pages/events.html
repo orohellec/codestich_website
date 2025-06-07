@@ -1,0 +1,150 @@
+---
+title: "Événements | Club de langues"
+description: "Événements à venir"
+permalink: "evenements/"
+eleventyNavigation:
+    key: Événements
+    order: 600
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <!-- Any page-specific tags that belong in the <head>, such as a page-specific stylesheet -->
+    <link rel="stylesheet" href="/assets/css/events.css" />
+{% endblock %}
+
+{% block body %}
+    <!-- Page HTML goes here, without a <main> wrapper. The <main> tag is already presented in layouts/base.html -->
+    <!-- ============================================ -->
+    <!--                   Events                     -->
+    <!-- ============================================ -->
+
+    <section id="events-1652">
+        <div class="cs-container">
+            <div class="cs-events">
+                <div class="cs-content">
+                    <span class="cs-topper">Événements</span>
+                    <h2 class="cs-title">Nos événements</h2>
+                </div>
+                <h2 class="cs-title">Journées portes Ouvertes</h2>
+                <ul class="cs-card-group">
+                    {% for event in events.jpoEvents %}
+                        <li class="cs-item">
+                            <span class="cs-date">
+                                <strong>26</strong>
+                                Oct
+                            </span>
+                            <div class="cs-info-wrapper">
+                                <div class="cs-info">
+                                    <h3 class="cs-h3">
+                                        Business Transformation Summit
+                                    </h3>
+                                    <span class="cs-location"
+                                        >1250 23rd Street NW, DC 20037</span
+                                    >
+                                    <span class="cs-time">
+                                        <img
+                                            class="cs-icon"
+                                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gold-clock.svg"
+                                            alt="icon"
+                                            width="24"
+                                            height="24"
+                                            loading="lazy"
+                                            decoding="async"
+                                            aria-hidden="true"
+                                        />
+                                        12:00AM - 02:00PM
+                                    </span>
+                                </div>
+                                <div class="cs-button-wrapper">
+                                    <a href="" class="cs-button-solid"
+                                        >Buy Ticket</a
+                                    >
+                                </div>
+                            </div>
+                        </li>
+                    {% endfor %}
+                </ul>
+                <h2 class="cs-title">Forums</h2>
+                <ul class="cs-card-group">
+                    {% for event in events.forumEvents %}
+                        <li class="cs-item">
+                            <span class="cs-date">
+                                <strong>26</strong>
+                                Oct
+                            </span>
+                            <div class="cs-info-wrapper">
+                                <div class="cs-info">
+                                    <h3 class="cs-h3">
+                                        Business Transformation Summit
+                                    </h3>
+                                    <span class="cs-location"
+                                        >1250 23rd Street NW, DC 20037</span
+                                    >
+                                    <span class="cs-time">
+                                        <img
+                                            class="cs-icon"
+                                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gold-clock.svg"
+                                            alt="icon"
+                                            width="24"
+                                            height="24"
+                                            loading="lazy"
+                                            decoding="async"
+                                            aria-hidden="true"
+                                        />
+                                        12:00AM - 02:00PM
+                                    </span>
+                                </div>
+                                <div class="cs-button-wrapper">
+                                    <a href="" class="cs-button-solid"
+                                        >Buy Ticket</a
+                                    >
+                                </div>
+                            </div>
+                        </li>
+                    {% endfor %}
+                </ul>
+                <h2 class="cs-title">Stages</h2>
+                <ul class="cs-card-group">
+                    {% for event in events.stageEvents %}
+                        <li class="cs-item">
+                            <span class="cs-date">
+                                <strong>26</strong>
+                                Oct
+                            </span>
+                            <div class="cs-info-wrapper">
+                                <div class="cs-info">
+                                    <h3 class="cs-h3">
+                                        Business Transformation Summit
+                                    </h3>
+                                    <span class="cs-location"
+                                        >1250 23rd Street NW, DC 20037</span
+                                    >
+                                    <span class="cs-time">
+                                        <img
+                                            class="cs-icon"
+                                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gold-clock.svg"
+                                            alt="icon"
+                                            width="24"
+                                            height="24"
+                                            loading="lazy"
+                                            decoding="async"
+                                            aria-hidden="true"
+                                        />
+                                        12:00AM - 02:00PM
+                                    </span>
+                                </div>
+                                <div class="cs-button-wrapper">
+                                    <a href="" class="cs-button-solid"
+                                        >Buy Ticket</a
+                                    >
+                                </div>
+                            </div>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </section>
+{% endblock %}
